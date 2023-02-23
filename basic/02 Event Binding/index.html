@@ -20,6 +20,7 @@
       <h2>Events in Action</h2>
       <button v-on:click="addCounter(10)">Add 10</button>
       <button v-on:click="lessCounter(5)">Remove 5</button>
+      <p v-once>Starting Number: {{ counter }}</p>
       <p>Result: {{ counter }}</p>
       <input
         type="text"
