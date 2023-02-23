@@ -6,6 +6,13 @@ const app = Vue.createApp({
     };
   },
   methods: {
+    showFullName() {
+      if (this.name === "") {
+        return "";
+      } else {
+        return this.name + " " + "Atallah";
+      }
+    },
     resetName() {
       this.name = "";
     },
