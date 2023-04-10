@@ -9,12 +9,12 @@
       <li><strong>Phone:</strong> {{ phoneNumber }}</li>
       <li><strong>Email:</strong> {{ emailAddress }}</li>
     </ul>
+    <button @click="$emit('delete', id)">Delete</button>
   </li>
 </template>
 
 <script>
 export default {
-  // props: ["name", "phoneNumber", "emailAddress", "isFavorite"],
   props: {
     id: {
       type: String,
@@ -38,6 +38,7 @@ export default {
       default: false,
     },
   },
+  emits: ["toggle-faforite", "delete"],
   data() {
     return {
       detailsAreVisible: false,
